@@ -5,22 +5,22 @@ import plotly.express as px
 import numpy as np
 import dash_bootstrap_components as dbc
 
-info = pd.DataFrame(np.load('/Users/lorenzotarricone/Desktop/Pasteur/App/Data_embeddings/Ctranspath_neig15_3d_info-2.npy').T)
+info = pd.DataFrame(np.load('Ctranspath_neig15_3d_info-2.npy').T)
 
-embeddings = pd.DataFrame(np.load('/Users/lorenzotarricone/Desktop/Pasteur/App/Data_embeddings/Ctranspath_neig15_3d-2.npy'))
+embeddings = pd.DataFrame(np.load('Ctranspath_neig15_3d-2.npy'))
 Ctranspath = pd.concat([embeddings, info], axis=1)
 Ctranspath.columns = ['x', 'y', 'z', 'survival', 'slide']
 
 
-embeddings = pd.DataFrame(np.load('/Users/lorenzotarricone/Desktop/Pasteur/App/Data_embeddings/Resnet50_neig15_3d-2.npy'))
+embeddings = pd.DataFrame(np.load('Resnet50_neig15_3d-2.npy'))
 Resnet50 = pd.concat([embeddings, info], axis=1)
 Resnet50.columns = ['x', 'y', 'z', 'survival', 'slide']
 
-embeddings = pd.DataFrame(np.load('//Users/lorenzotarricone/Desktop/Pasteur/App/Data_embeddings/Resnet50_early_neig15_3d.npy'))
+embeddings = pd.DataFrame(np.load('Resnet50_early_neig15_3d.npy'))
 Resnet50_early = pd.concat([embeddings, info], axis=1)
 Resnet50_early.columns = ['x', 'y', 'z', 'survival', 'slide']
 
-embeddings = pd.DataFrame(np.load('/Users/lorenzotarricone/Desktop/Pasteur/App/Data_embeddings/SimCLR_neig15_3d-2.npy'))
+embeddings = pd.DataFrame(np.load('SimCLR_neig15_3d-2.npy'))
 SimCLR = pd.concat([embeddings, info], axis=1)
 SimCLR.columns = ['x', 'y', 'z', 'survival', 'slide']
 
