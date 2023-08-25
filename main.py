@@ -41,6 +41,7 @@ feature_extractor_descriptions = {
 # Initialize the app - incorporate a Dash Bootstrap theme
 external_stylesheets = [dbc.themes.LUX]
 app = Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 
 # App layout
 app.layout = dbc.Container([
